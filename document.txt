@@ -1,7 +1,0 @@
-#ERROS
-
-
-#Resolver rolagem na página de Galeria - Prioridade
-#Site ser todo responsivo - Prioridade
-
-#Criar banco de dados - Se possivel
