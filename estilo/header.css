@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    background-color: #141414;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    transition: background-color 0.3s ease;
+}
+
+/* Cabeçalho */
+header {
+    height: 60px;
+    background: #3D3B3B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Botão do menu lateral (aparece em telas pequenas) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 30px;
+    height: 30px;
+}
+
+/* Navegação (Menu superior para telas grandes) */
+nav.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+.link {
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    color: #ddd;
+}
+
+/* Menu Lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Menu oculto por padrão */
+    width: 250px;
+    height: 100%;
+    background-color: #3D3B3B;
+    transition: left 0.3s ease; /* Transição suave */
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menu-lateral div.menu-toggle {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+/* Quando o menu lateral é mostrado */
+.menu-lateral.show {
+    left: 0;
+}
+
+/* Links no Menu Lateral */
+.menu-lateral a {
+    display: block;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.menu-lateral a:hover {
+    background-color: #575757;
+}
+
+/* Botão no Menu Lateral */
+.botao {
+    margin: 14px 10px;
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background: green;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.botao:hover {
+    background: #444;
+}
+
+/* Para telas grandes (largura >= 1024px) */
+@media (max-width: 1024px) {
+    .botao {
+        width: 45px;
+        height: 25px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Para tablets e telas médias (largura >= 768px) */
+@media (max-width: 768px) {
+    .botao {
+        width: 40px;
+        height: 25px;
+    }
+
+    nav.nav-bar {
+        display: none; /* Esconde o menu superior */
+    }
+
+    .menu-lateral {
+        display: block; /* Exibe o menu lateral */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Para smartphones e telas pequenas (largura >= 480px) */
+@media (max-width: 480px) {
+    .botao {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 16vw; /* Faz com que o rodapé fique na parte inferior da página */
+    font-size: 14px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .footer p {
+        font-size: 12px; /* Ajuste do tamanho da fonte para telas menores */
+    }
+}

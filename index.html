@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="midia/logo.ico" type="logo">
+    <link rel="stylesheet" href="estilo/header.css">
+    <link rel="stylesheet" href="estilo/index.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Ícone do Menu (aparece em telas pequenas) -->
+        <div class="menu-toggle" onclick="AbrirLateralMenu()">
+            <img src="midia/menu.png" alt="Ícone do menu" class="menu-bar">
+        </div>
+        
+        <!-- Navegação (Menu superior para telas grandes) -->
+        <nav class="nav-bar">
+            <a href="#" class="link">Home</a>
+            <a href="#" class="link">Galeria</a>
+            <a href="html/feedback.html" class="link">Feedback</a>
+            <input type="button" value="Light" class="botao" onclick="mode()">
+        </nav>
+    </header>
+    <!-- Cabeçalho -->
+
+    <!-- Menu Lateral -->
+    <div class="menu-lateral">
+        <div class="menu-toggle" onclick="FecharLateralMenu()">
+            <img src="midia/menu.png" alt="Ícone do menu" class="menu-bar">
+        </div>
+        <a href="#" class="link">Home</a>
+        <a href="#" class="link">Galeria</a>
+        <a href="html/feedback.html" class="link">Feedback</a>
+        <input type="button" value="Mudar" class="botao" onclick="mode()">
+    </div>
+    <!-- Menu Lateral -->
+
+    <!-- Main -->
+    <main>
+        <!-- Card -->
+        <div class="card">
+            <div class="card-content">
+                <img src="midia/andreas-perfil.webp" alt="Logo Netflix" class="logo">
+                <div class="details">
+                    <h2>Andreas</h2>
+                    <img src="midia/andreas.jpg" alt="Foto de um ator" class="person-photo">
+                    <p class="description">
+                        Moro no pacheco, trabalho em escala 6x1, e Ensino superior em andamento.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+            <div class="card-content">
+                <img src="midia/gabriel-perfil.jpg" alt="Logo Netflix" class="logo">
+                <div class="details">
+                    <h2>Gabriel</h2>
+                    <img src="midia/gabriel.jpg" alt="Foto de um ator" class="person-photo">
+                    <p class="description">
+                        Moro em Olinda, sou proativo, também estou cursando o Ensino superior e gosto de visitar lugares.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+            <div class="card-content">
+                <img src="midia/victor-perfil.jpg" alt="Logo Netflix" class="logo">
+                <div class="details">
+                    <h2>Victor</h2>
+                    <img src="midia/victor.jpg" alt="Foto de um ator" class="person-photo">
+                    <p class="description">
+                        Moro no Ibura, gosto de andar de bike, conhecer pessoas novas, e também estou cursando o Ensino Superior
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MeuSite - Todos os direitos reservados</p>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>
