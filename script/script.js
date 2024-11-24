@@ -78,8 +78,17 @@ function moverCarrossel(usuarioIndex, direcao) {
 
 
 //feedback=====================================================================================================
+// Banco de dados simulado com um array de objetos
+const bancoDeDados = [
+    { email: "andreas@gmail.com", senha: "123456" },
+    { email: "gabriel@gmail.com", senha: "123456" },
+    { email: "victor@gmail.com", senha: "123456" }
+];
+
+// Lógica para o formulário de login
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evita o envio do formulário
+
     // Obtendo os valores dos campos
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -88,14 +97,25 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         alert("Por favor, preencha todos os campos.");
         return;
     }
-    // Lógica de validação de login (apenas para exemplo)
-    console.log("Tentando fazer login com:", email, password);
-    alert("Usuário não encontrado.");
-    // Aqui você pode adicionar lógica de autenticação real com API
+
+    // Validação de login
+    const usuario = bancoDeDados.find(user => user.email === email && user.senha === password);
+
+    if (usuario) {
+        alert("Login bem-sucedido!");
+        console.log("Usuário logado:", usuario.email);
+        // Aqui você pode redirecionar para outra página ou realizar outras ações
+    } else {
+        alert("Usuário não encontrado ou senha incorreta.");
+    }
 });
+
+// Função para "Esqueci a senha"
 document.getElementById("forgotPassword").addEventListener("click", function() {
-    alert("[ERRO...]");
+    alert("Erro: Funcionalidade de recuperação de senha não implementada.");
 });
+
+// Função para "Cadastrar-se"
 document.getElementById("signUpLink").addEventListener("click", function() {
-    alert("[ERRO...]");
+    alert("Erro: Funcionalidade de cadastro não implementada.");
 });
