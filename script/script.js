@@ -44,28 +44,36 @@ window.addEventListener('resize', function() {
 
 
 //galeria======================================================================================================
-let carrosselIndex = [0, 0, 0];  // Um índice para cada usuário
-
-// Função para mover o carrossel de um usuário específico
+// Função para mover o carrossel
 function moverCarrossel(usuarioIndex, direcao) {
     const carrossel = document.getElementById(`carrossel-${usuarioIndex}`);
-    const totalCards = carrossel.children.length;
+    const cards = carrossel.getElementsByClassName('card');
+    const numeroDeCards = cards.length;
 
-    // Atualiza o índice dependendo da direção
+    // Pegue o primeiro ou último cartão visível
+    const cardWidth = cards[0].offsetWidth + 20; // largura de um card mais a margem
+    const currentTransform = carrossel.style.transform;
+    const currentPosition = currentTransform ? parseInt(currentTransform.split('(')[1].split('px')[0]) : 0;
+
+    // Calcular o novo deslocamento (offset)
+    let novoDeslocamento;
     if (direcao === 'next') {
-        carrosselIndex[usuarioIndex] = (carrosselIndex[usuarioIndex] + 1) % totalCards;
+      novoDeslocamento = currentPosition - cardWidth;
+      // Se chegar ao último, ir para o primeiro
+      if (Math.abs(novoDeslocamento) >= cardWidth * (numeroDeCards)) {
+        novoDeslocamento = 0;
+      }
     } else {
-        carrosselIndex[usuarioIndex] = (carrosselIndex[usuarioIndex] - 1 + totalCards) % totalCards;
+      novoDeslocamento = currentPosition + cardWidth;
+      // Se voltar ao primeiro, ir para o último
+      if (novoDeslocamento > 0) {
+        novoDeslocamento = -(cardWidth * (numeroDeCards - 1));
+      }
     }
 
-    // Move o carrossel
-    carrossel.style.transform = `translateX(-${carrosselIndex[usuarioIndex] * (250 + 10)}px)`; // 250px é o tamanho do card, 10px é o espaçamento
+    // Aplica a nova transformação
+    carrossel.style.transform = `translateX(${novoDeslocamento}px)`;
 }
-
-
-
-
-
 
 
 

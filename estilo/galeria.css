@@ -1,98 +1,128 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 /* Contêiner do Carrossel */
 .carrossel-container {
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
 }
 
 /* Estilo para cada usuário */
 .usuario {
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 /* Título do usuário */
 h2 {
-    margin-bottom: 10px;
-    font-size: 22px;
-    color: #333;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: whitesmoke ;
 }
 
 /* Wrapper para o carrossel, com os botões de navegação */
 .carrossel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 /* Estilo do carrossel */
 .carrossel {
-    display: flex;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Estilo dos cartões */
 .card {
-    width: 250px; /* Tamanho fixo dos cards */
-    height: 400px; /* Tamanho fixo dos cards */
-    margin: 0 10px; /* Espaçamento entre os cards */
-    transition: transform 0.3s ease-in-out;
+  width: 250px; /* Tamanho fixo dos cartões */
+  height: 400px; /* Tamanho fixo dos cartões */
+  margin: 0 10px; /* Espaçamento entre os cartões */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  opacity: 0.8;
+}
+
+.card:hover::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
 /* Estilo dos botões de navegação */
 button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo mais escura */
+  color: white;
+  border: 2px solid #fff; /* Borda branca visível */
+  padding: 20px 30px; /* Maior tamanho para o botão */
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para maior destaque */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button.prev {
-    left: -40px;
+  left: -0px; /* Distância menor da borda esquerda */
 }
 
 button.next {
-    right: -40px;
+  right: -0px; /* Distância menor da borda direita */
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9); /* Cor mais escura ao passar o mouse */
+  transform: translateY(-50%) scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+button:active {
+  transform: translateY(-50%) scale(0.95); /* Efeito de "pressionamento" do botão */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .card {
-        width: 200px;
-        height: 320px;
-    }
+  .card {
+    width: 200px;
+    height: 320px;
+  }
+
+  button {
+    padding: 15px 25px;
+    font-size: 24px;
+  }
 }
