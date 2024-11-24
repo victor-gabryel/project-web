@@ -7,7 +7,6 @@
 /* Corpo */
 body {
     background-color: #141414;
-    overflow-x: hidden; /* Impede rolagem horizontal */
     transition: background-color 0.3s ease;
 }
 
@@ -164,7 +163,7 @@ nav.nav-bar {
     color: #fff;
     text-align: center;
     padding: 20px;
-    margin-top: 18vw; /* Faz com que o rodapé fique na parte inferior da página */
+    margin-top: 17vw; /* Faz com que o rodapé fique na parte inferior da página */
     font-size: 14px;
 }
 

@@ -10,64 +10,117 @@
 </head>
 <body>
 
-  <!-- Carrosel Container -->
-  <div class="carrossel-container">
-    <!-- Andreas Souza -->
-    <div class="usuario">
-      <h2>Andreas Souza</h2>
-      <div class="carrossel-wrapper">
-        <button class="prev" onclick="moverCarrossel(0, 'prev')">←</button>
-        <div class="carrossel" id="carrossel-0">
-          <div class="card" data-info="Informações do Card 1"><img src="https://via.placeholder.com/250x400" alt="Card 1"></div>
-          <div class="card" data-info="Informações do Card 2"><img src="https://via.placeholder.com/250x400" alt="Cartão 2"></div>
-          <div class="card" data-info="Informações do Card 3"><img src="https://via.placeholder.com/250x400" alt="Cartão 3"></div>
-          <div class="card" data-info="Informações do Card 4"><img src="https://via.placeholder.com/250x400" alt="Cartão 4"></div>
-          <div class="card" data-info="Informações do Card 5"><img src="https://via.placeholder.com/250x400" alt="Cartão 5"></div>
-          <div class="card" data-info="Informações do Card 6"><img src="https://via.placeholder.com/250x400" alt="Cartão 6"></div>
-          <div class="card" data-info="Informações do Card 7"><img src="https://via.placeholder.com/250x400" alt="Cartão 7"></div>
-          <div class="card" data-info="Informações do Card 8"><img src="https://via.placeholder.com/250x400" alt="Cartão 8"></div>
-        </div>
-        <button class="next" onclick="moverCarrossel(0, 'next')">→</button>
-      </div>
+  <!-- Cabeçalho -->
+  <header>
+    <!-- Ícone do Menu (aparece em telas pequenas) -->
+    <div class="menu-toggle" onclick="AbrirLateralMenu()">
+        <img src="../midia/menu.png" alt="Ícone do menu" class="menu-bar">
     </div>
-    <!-- Gabriel Vitor -->
-    <div class="usuario">
-      <h2>Gabriel Vitor</h2>
-      <div class="carrossel-wrapper">
-        <button class="prev" onclick="moverCarrossel(1, 'prev')">←</button>
-        <div class="carrossel" id="carrossel-1">
-          <div class="card" data-info="Informações do Card 1"><img src="https://via.placeholder.com/250x400" alt="Cartão 1"></div>
-          <div class="card" data-info="Informações do Card 2"><img src="https://via.placeholder.com/250x400" alt="Cartão 2"></div>
-          <div class="card" data-info="Informações do Card 3"><img src="https://via.placeholder.com/250x400" alt="Cartão 3"></div>
-          <div class="card" data-info="Informações do Card 4"><img src="https://via.placeholder.com/250x400" alt="Cartão 4"></div>
-          <div class="card" data-info="Informações do Card 5"><img src="https://via.placeholder.com/250x400" alt="Cartão 5"></div>
-          <div class="card" data-info="Informações do Card 6"><img src="https://via.placeholder.com/250x400" alt="Cartão 6"></div>
-          <div class="card" data-info="Informações do Card 7"><img src="https://via.placeholder.com/250x400" alt="Cartão 7"></div>
-          <div class="card" data-info="Informações do Card 8"><img src="https://via.placeholder.com/250x400" alt="Cartão 8"></div>
-        </div>
-        <button class="next" onclick="moverCarrossel(1, 'next')">→</button>
+    
+    <!-- Navegação (Menu superior para telas grandes) -->
+    <nav class="nav-bar">
+        <a href="../index.html" class="link">Home</a>
+        <a href="galeria.html" class="link">Galeria</a>
+        <a href="feedback.html" class="link">Feedback</a>
+        <input type="button" value="Light" class="botao" onclick="mode()">
+    </nav>
+  </header>
+  <!-- Cabeçalho -->
+
+  <!-- Menu Lateral -->
+  <div class="menu-lateral">
+      <div class="menu-toggle" onclick="FecharLateralMenu()">
+          <img src="../midia/menu.png" alt="Ícone do menu" class="menu-bar">
       </div>
-    </div>
-    <!-- Victor Gabryel -->
-    <div class="usuario">
-      <h2>Victor Gabryel</h2>
-      <div class="carrossel-wrapper">
-        <button class="prev" onclick="moverCarrossel(2, 'prev')">←</button>
-        <div class="carrossel" id="carrossel-2">
-          <div class="card" data-info="Informações do Card 1"><img src="https://via.placeholder.com/250x400" alt="Cartão 1"></div>
-          <div class="card" data-info="Informações do Card 2"><img src="https://via.placeholder.com/250x400" alt="Cartão 2"></div>
-          <div class="card" data-info="Informações do Card 3"><img src="https://via.placeholder.com/250x400" alt="Cartão 3"></div>
-          <div class="card" data-info="Informações do Card 4"><img src="https://via.placeholder.com/250x400" alt="Cartão 4"></div>
-          <div class="card" data-info="Informações do Card 5"><img src="https://via.placeholder.com/250x400" alt="Cartão 5"></div>
-          <div class="card" data-info="Informações do Card 6"><img src="https://via.placeholder.com/250x400" alt="Cartão 6"></div>
-          <div class="card" data-info="Informações do Card 7"><img src="https://via.placeholder.com/250x400" alt="Cartão 7"></div>
-          <div class="card" data-info="Informações do Card 8"><img src="https://via.placeholder.com/250x400" alt="Cartão 8"></div>
-        </div>
-        <button class="next" onclick="moverCarrossel(2, 'next')">→</button>
-      </div>
-    </div>
+      <a href="../index.html" class="link">Home</a>
+      <a href="galeria.html" class="link">Galeria</a>
+      <a href="feedback.html" class="link">Feedback</a>
+      <input type="button" value="Mudar" class="botao" onclick="mode()">
   </div>
-  <!-- Carrosel Container -->
+  <!-- Menu Lateral -->
+
+  <main>
+    <!-- Carrosel Container -->
+    <div class="carrossel-container">
+      <!-- Andreas Souza -->
+      <div class="usuario">
+        <h2>Andreas Souza</h2>
+        <div class="carrossel-wrapper">
+          <button class="prev" onclick="moverCarrossel(0, 'prev')">←</button>
+          <div class="carrossel" id="carrossel-0">
+
+            <div class="card" data-info="Arcane (oficialmente intitulada como Arcane: League of Legends) é uma série de televisão de streaming de animação adulta, dos gêneros ação e aventura, criada por Christian Linke e Alex Yee e distribuída pela Netflix.">
+              <img src="../midia/a01.jpeg" alt="Card 1"></div>
+
+            <div class="card" data-info="Após ser atingido por uma teia radioativa, Miles Morales, um jovem negro do Brooklyn, se torna o Homem-Aranha, inspirado no legado do já falecido Peter Parker. Entretanto, ao visitar o túmulo de seu ídolo em uma noite chuvosa, ele é surpreendido com a presença do próprio Peter, vestindo o traje do herói por baixo de um sobretudo. A surpresa fica ainda maior quando Miles descobre que ele veio de uma dimensão paralela, assim como outras versões do Homem-Aranha."><img src="../midia/a02.jpeg" alt="Cartão 2"></div>
+
+            <div class="card" data-info="Grown Ups (bra: Gente Grande[2]; prt: Miúdos e Graúdos[4]) é um filme de comédia estadunidense de 2010 dirigido por Dennis Dugan, escrito por Fred Wolf e Adam Sandler, que também protagoniza o filme junto com Kevin James, Chris Rock, David Spade, Rob Schneider, Salma Hayek, Maya Rudolph e Maria Bello. Foi produzido pela empresa de Sandler, a Happy Madison Productions, e distribuído pela Columbia/Sony Pictures.[5]"><img src="../midia/a03.jpeg" alt="Cartão 3"></div>
+
+            <div class="card" data-info="Informações do Card 4"><img src="../midia/a04.jpeg" alt="Cartão 4"></div>
+
+            <div class="card" data-info="Informações do Card 5"><img src="../midia/a05.jpeg" alt="Cartão 5"></div>
+
+            <div class="card" data-info="Informações do Card 6"><img src="../midia/a06.jpeg" alt="Cartão 6"></div>
+
+            <div class="card" data-info="Informações do Card 7"><img src="../midia/a07.jpeg" alt="Cartão 7"></div>
+
+          </div>
+          <button class="next" onclick="moverCarrossel(0, 'next')">→</button>
+        </div>
+      </div>
+      <!-- Gabriel Vitor -->
+      <div class="usuario">
+        <h2>Gabriel Vitor</h2>
+        <div class="carrossel-wrapper">
+          <button class="prev" onclick="moverCarrossel(1, 'prev')">←</button>
+          <div class="carrossel" id="carrossel-1">
+
+            <div class="card" data-info="Informações do Card 1"><img src="https://via.placeholder.com/250x400" alt="Cartão 1"></div>
+            
+            <div class="card" data-info="Informações do Card 2"><img src="https://via.placeholder.com/250x400" alt="Cartão 2"></div>
+
+            <div class="card" data-info="Informações do Card 3"><img src="https://via.placeholder.com/250x400" alt="Cartão 3"></div>
+
+            <div class="card" data-info="Informações do Card 4"><img src="https://via.placeholder.com/250x400" alt="Cartão 4"></div>
+
+            <div class="card" data-info="Informações do Card 5"><img src="https://via.placeholder.com/250x400" alt="Cartão 5"></div>
+
+            <div class="card" data-info="Informações do Card 6"><img src="https://via.placeholder.com/250x400" alt="Cartão 6"></div>
+
+            <div class="card" data-info="Informações do Card 7"><img src="https://via.placeholder.com/250x400" alt="Cartão 7"></div>
+
+          </div>
+          <button class="next" onclick="moverCarrossel(1, 'next')">→</button>
+        </div>
+      </div>
+      <!-- Victor Gabryel -->
+      <div class="usuario">
+        <h2>Victor Gabryel</h2>
+        <div class="carrossel-wrapper">
+          <button class="prev" onclick="moverCarrossel(2, 'prev')">←</button>
+          <div class="carrossel" id="carrossel-2">
+
+            <div class="card" data-info="Informações do Card 1"><img src="https://via.placeholder.com/250x400" alt="Cartão 1"></div>
+
+            <div class="card" data-info="Informações do Card 2"><img src="https://via.placeholder.com/250x400" alt="Cartão 2"></div>
+
+            <div class="card" data-info="Informações do Card 3"><img src="https://via.placeholder.com/250x400" alt="Cartão 3"></div>
+
+            <div class="card" data-info="Informações do Card 4"><img src="https://via.placeholder.com/250x400" alt="Cartão 4"></div>
+
+            <div class="card" data-info="Informações do Card 5"><img src="https://via.placeholder.com/250x400" alt="Cartão 5"></div>
+
+            <div class="card" data-info="Informações do Card 6"><img src="https://via.placeholder.com/250x400" alt="Cartão 6"></div>
+
+            <div class="card" data-info="Informações do Card 7"><img src="https://via.placeholder.com/250x400" alt="Cartão 7"></div>
+            
+          </div>
+          <button class="next" onclick="moverCarrossel(2, 'next')">→</button>
+        </div>
+      </div>
+    </div>
+    <!-- Carrosel Container -->
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
