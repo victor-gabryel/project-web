@@ -29,6 +29,7 @@ header {
 }
 
 .menu-bar {
+    border-radius: 10px;
     width: 30px;
     height: 30px;
 }
@@ -142,6 +143,9 @@ nav.nav-bar {
     .menu-toggle {
         display: block;
     }
+    .footer p {
+        font-size: 12px; /* Ajuste do tamanho da fonte para telas menores */
+    }
 }
 
 /* Para smartphones e telas pequenas (largura >= 480px) */
@@ -165,11 +169,4 @@ nav.nav-bar {
     padding: 20px;
     margin-top: 17vw; /* Faz com que o rodapé fique na parte inferior da página */
     font-size: 14px;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .footer p {
-        font-size: 12px; /* Ajuste do tamanho da fonte para telas menores */
-    }
 }
