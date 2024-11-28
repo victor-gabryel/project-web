@@ -93,8 +93,7 @@ main {
 }
 
 /* Responsividade */
-
-/* Para telas grandes (largura >= 1024px) */
+/* Para telas grandes */
 @media (max-width: 1024px) {
     .card {
         width: 220px;
@@ -102,7 +101,7 @@ main {
     }
 }
 
-/* Para tablets e telas médias (largura >= 768px) */
+/* Para tablets e telas médias */
 @media (max-width: 768px) {
     .card {
         width: 200px;
@@ -110,12 +109,10 @@ main {
     }
 }
 
-/* Para smartphones e telas pequenas (largura >= 480px) */
+/* Para smartphones e telas pequenas */
 @media (max-width: 480px) {
     .card {
         width: 100%;
         height: 250px;
     }
 }
-
-

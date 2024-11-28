@@ -59,11 +59,11 @@ nav.nav-bar {
 .menu-lateral {
     position: fixed;
     top: 0;
-    left: -250px; /* Menu oculto por padrão */
+    left: -250px;
     width: 250px;
     height: 100%;
     background-color: #3D3B3B;
-    transition: left 0.3s ease; /* Transição suave */
+    transition: left 0.3s ease;
     padding-top: 60px;
     z-index: 1000;
 }
@@ -75,7 +75,6 @@ nav.nav-bar {
     transform: translate(-50%, -50%);
 }
 
-/* Quando o menu lateral é mostrado */
 .menu-lateral.show {
     left: 0;
 }
@@ -119,11 +118,12 @@ nav.nav-bar {
     color: #fff;
     text-align: center;
     padding: 10px;
-    margin-top: 18vw; /* Faz com que o rodapé fique na parte inferior da página */
+    margin-top: 18vw;
     font-size: 14px;
 }
 
-/* Para telas grandes (largura >= 1024px) */
+/* Responsividade */
+/* Para telas grandes */
 @media (max-width: 1024px) {
     .botao {
         width: 45px;
@@ -135,7 +135,7 @@ nav.nav-bar {
     }
 }
 
-/* Para tablets e telas médias (largura >= 768px) */
+/* Para tablets e telas médias */
 @media (max-width: 768px) {
     .botao {
         width: 40px;
@@ -154,14 +154,14 @@ nav.nav-bar {
         display: block;
     }
     .footer {
-        margin-top: 18vw;
+        margin-top: 20vw;
     }
     .footer p {
-        font-size: 12px; /* Ajuste do tamanho da fonte para telas menores */
+        font-size: 12px;
     }
 }
 
-/* Para smartphones e telas pequenas (largura >= 480px) */
+/* Para smartphones e telas pequenas */
 @media (max-width: 480px) {
     .botao {
         width: 40px;

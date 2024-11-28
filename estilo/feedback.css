@@ -100,12 +100,12 @@ button.btn:hover {
     }
 }
 
-/* Para dispositivos móveis (telas menores que 480px) */
+/* Para dispositivos móveis */
 @media (max-width: 480px) {
     .form-container {
         padding: 1rem;
         width: 90%;
-        max-width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 100%;
     }
 
     h1 {

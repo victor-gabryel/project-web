@@ -43,9 +43,9 @@ h2 {
 
 /* Estilo dos cartões */
 .card {
-  width: 250px; /* Tamanho fixo dos cartões */
-  height: 400px; /* Tamanho fixo dos cartões */
-  margin: 0 10px; /* Espaçamento entre os cartões */
+  width: 250px;
+  height: 400px;
+  margin: 0 10px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   position: relative;
 }
@@ -76,10 +76,10 @@ h2 {
 
 /* Estilo dos botões de navegação */
 button {
-  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo mais escura */
+  background-color: rgba(0, 0, 0, 0.7); 
   color: white;
-  border: 2px solid #fff; /* Borda branca visível */
-  padding: 20px 30px; /* Maior tamanho para o botão */
+  border: 2px solid #fff;
+  padding: 20px 30px;
   cursor: pointer;
   font-size: 30px;
   border-radius: 50%;
@@ -87,25 +87,25 @@ button {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para maior destaque */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button.prev {
-  left: -0px; /* Distância menor da borda esquerda */
+  left: -0px;
 }
 
 button.next {
-  right: -0px; /* Distância menor da borda direita */
+  right: -0px;
 }
 
 button:hover {
-  background-color: rgba(0, 0, 0, 0.9); /* Cor mais escura ao passar o mouse */
-  transform: translateY(-50%) scale(1.1); /* Efeito de aumento ao passar o mouse */
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
 }
 
 button:active {
-  transform: translateY(-50%) scale(0.95); /* Efeito de "pressionamento" do botão */
+  transform: translateY(-50%) scale(0.95);
 }
 
 /* Responsividade */
